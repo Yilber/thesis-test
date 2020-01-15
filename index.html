@@ -24,7 +24,16 @@
           <span></span>
         </a>
 
-        <nav id="main-navbar">
+        <nav id="navbar-mobile">
+          <ul class="navbar-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <nav class="navbar-desktop">
           <ul class="navbar-links">
             <li><a href="#">About</a></li>
             <li><a href="#">Integrations</a></li>
@@ -90,15 +99,15 @@
     </footer>
 
     <script type="text/javascript">
-      var navbar = document.getElementById('main-navbar');
+      var navbar = document.getElementById('navbar-mobile');
       var navbarButton = document.getElementById('navbar-btn');
 
       navbarButton.addEventListener('focus', function() {
-        navbar.classList.add("navbar-open");
+        navbar.classList.add("open");
       });
 
       navbarButton.addEventListener('focusout', function() {
-        navbar.classList.remove("navbar-open");
+        navbar.classList.remove("open");
       });
     </script>
   </body>
