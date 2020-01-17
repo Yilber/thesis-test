@@ -57,17 +57,17 @@
               <div class="signup-form__fields">
                 <div>
                   <label for="name">Name</label>
-                  <input class="signup-form__input" type="text" name="name" id="name" placeholder="Name">
+                  <input class="signup-form__input" type="text" autocomplete="name "name="name" id="name" placeholder="Name">
                 </div>
 
                 <div>
                   <label for="email">Email</label>
-                  <input class="signup-form__input input-border" type="email" name="email" id="email" placeholder="E-mail">
+                  <input class="signup-form__input input-border" autocomplete="email" type="email" name="email" id="email" placeholder="E-mail">
                 </div>
 
                 <div class="inner-input">
                   <label for="password">Password</label>
-                  <input class="signup-form__input" type="password" name="password" id="password" placeholder="Password">
+                  <input class="signup-form__input" autocomplete="new-password" type="password" name="password" id="password" placeholder="Password">
                   <span id="password-toggle" class="toggle">
                     <svg width="26" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.109 13.891C1.617 11.831 0 9 0 9s4-7 13-7c1.305 0 2.504.147 3.601.399l-.85.85A15.106 15.106 0 0 0 13 3C5 3 1.2 9 1.2 9s1.515 2.392 4.645 4.155l-.736.736zm4.29 1.71c1.097.252 2.296.399 3.601.399 9 0 13-7 13-7s-1.617-2.83-5.109-4.891l-.736.736C23.285 6.608 24.8 9 24.8 9S21 15 13 15c-.98 0-1.897-.09-2.752-.248l-.85.85zm7.5-7.5a4 4 0 0 1-4.797 4.797L13 12a2.99 2.99 0 0 0 2.121-.879A2.99 2.99 0 0 0 16 9l.899-.899zm-3-3a4 4 0 0 0-4.797 4.797L10 9c0-.768.293-1.536.879-2.121A2.99 2.99 0 0 1 13 6l.899-.899zM21 0L4 17l1 1L22 1l-1-1z" fill="#9B9B9B"/></svg>
                   </span>
@@ -107,8 +107,8 @@
       var password = document.getElementById('password');
       var toggle = document.getElementById('password-toggle');
 
-      navbarButton.addEventListener('focus', function() {
-        navbar.classList.add("open");
+      navbarButton.addEventListener('click', function() {
+      	navbar.classList.toggle("open");
       });
 
       navbarButton.addEventListener('focusout', function() {
