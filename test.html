@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IOS Height</title>
+  </head>
+<body>
+  <h1>iosInnerHeight measurement: <span id="measurement"></span></h1>
+  <p> meta name="viewport" content="width=device-width"</p>
+  <script src="ios-inner-height.min.js"></script>
+
+  <script>
+    var el = document.getElementById('measurement');
+
+    setInterval(function () {
+      el.textContent = iosInnerHeight() + 'px';
+    }, 100);
+  </script>
+</body>
+</html>
